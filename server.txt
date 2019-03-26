@@ -1,0 +1,54 @@
+/// DOCKER MSSQL SERVER CNFIG \\\
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Technocrat123' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest 
+
+sudo docker exec -it determined_shtern /opt/mssql-tools/bin/sqlcmd \
+   -S localhost -U SA -P 'Technocrat123' \
+   -Q 'ALTER LOGIN SA WITH PASSWORD="NewPass"'
+
+   sudo docker exec -it determined_shtern "bash"
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Newpass
+
+
+///  DOCKER ORACLE 12C SERVER CONFIG \\\
+
+Oracle 12c Standard Edition - Installed image
+base image: sath89/oracle-12c
+
+Usage
+docker pull laboratoriobridge/oracle-12c
+
+docker run -d -p 8888:8080 -p 1521:1521 laboratoriobridge/oracle-12c
+
+Access data
+hostname: localhost
+
+port: 1521
+
+sid: xe
+
+service name: xe
+
+username: system / sys (SYSDBA)
+
+password: oracle
+
+Enterprise Manager
+http://localhost:8888/em
+
+user: sys
+
+password: oracle
+
+connect as sysdba: true
+
+APEX
+http://localhost:8888/apex
+
+workspace: INTERNAL
+
+user: ADMIN
+
+password: 0Racle$
+
+>>>sqlplus
