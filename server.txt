@@ -59,3 +59,9 @@ password: 0Racle$
 docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=test10 -d mariadb
 mysql -u root -p 
 >>test10
+
+// DOCKER MYSQL DB CONFIG \\
+
+ docker run --name mariadb-7702 -p 7702:3306 -v /docker/mariadb-7702/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=pass -d mariad
+
+
