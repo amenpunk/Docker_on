@@ -52,3 +52,10 @@ user: ADMIN
 password: 0Racle$
 
 >>>sqlplus
+
+
+// DOCKER MARIA DB CONFIG \\
+
+docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=test10 -d mariadb
+mysql -u root -p 
+>>test10
